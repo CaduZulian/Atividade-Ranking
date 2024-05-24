@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Ranking | Login</title>
+  </head>
+
+  <body>
+    <form action="./backend.php" method="post" class="form">
+      <h1>Login</h1>
+
+      <div class="input">
+        <label for="ra">RA</label>
+        <input type="number" name="ra" id="ra" />
+      </div>
+
+      <div class="input">
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" />
+        <a href="../ResetPassword" target="_blank" rel="noopener noreferrer">
+          Esqueci minha senha
+        </a>
+      </div>
+
+      <button type="submit" class="button-primary">Login</button>
+
+      <div class="line">
+        <hr>
+
+        <span>Não possui usuário?</span>
+
+        <hr>
+      </div>
+
+      <a href="../Register" class="button-secondary">Cadastrar</a>
+    </form>
+  </body>
+</html>
