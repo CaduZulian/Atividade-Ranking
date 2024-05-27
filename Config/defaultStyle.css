@@ -1,0 +1,90 @@
+:root {
+  --primary-color: #03223f;
+  --primary-color-hover: #0a2c4e;
+  --secondary-color: #6e8f85;
+  --secondary-color-hover: #8aa39b;
+
+  --background: #f0f0f0;
+
+  --border: #ddd;
+
+  --text-dark: #333;
+  --text-light: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+
+.button-primary {
+  text-decoration: none;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  text-align: center;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.button-secondary {
+  text-decoration: none;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.button-secondary:hover {
+  background-color: var(--secondary-color-hover);
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input label {
+  font-size: 1rem;
+}
+
+.input input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border);
+}
+
+.input a {
+  font-size: 1rem;
+  color: var(--primary-color);
+}

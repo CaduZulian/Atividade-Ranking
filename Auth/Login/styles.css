@@ -1,56 +1,26 @@
-:root {
-  --primary-color: #d1eaee;
-  --primary-color-hover: #b3dfe2;
-  --secondary-color: #026f6e;
-  --secondary-color-hover: #025151;
-
-  --background: #f0f0f0;
-
-  --border: #ddd;
-
-  --text-dark: #333;
-  --text-light: #fff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Roboto";
+  background: var(--primary-color);
+}
 
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
+  width: 30%;
+
+  background: var(--background);
+
+  padding: 1rem;
+
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
 }
 
-.left {
-  width: 50%;
-  height: 100%;
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.left img {
-  width: 50%;
-}
-
-.right {
-  width: 50%;
-  height: 100%;
-  background-color: var(--background);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+.container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
 }
 
 .form {
@@ -58,29 +28,6 @@ body {
   flex-direction: column;
   width: 100%;
   gap: 1rem;
-}
-
-.input {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.input label {
-  font-size: 1rem;
-}
-
-.input input {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 0.25rem;
-  border: 1px solid var(--border);
-}
-
-.input a {
-  font-size: 1rem;
-  color: var(--secondary-color);
 }
 
 .line {
@@ -99,38 +46,4 @@ body {
 .line span {
   font-size: 1rem;
   color: var(--text-dark);
-}
-
-.button-primary {
-  text-decoration: none;
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 0.25rem;
-  background-color: var(--secondary-color);
-  color: var(--text-light);
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-}
-
-.button-primary:hover {
-  background-color: var(--secondary-color-hover);
-}
-
-.button-secondary {
-  text-decoration: none;
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 0.25rem;
-  background-color: var(--primary-color);
-  color: var(--text-dark);
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-}
-
-.button-secondary:hover {
-  background-color: var(--primary-color-hover);
 }
