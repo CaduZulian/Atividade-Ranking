@@ -24,7 +24,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <main class="container">
       <form action="./backend.php" method="post" class="form">
         <h1>Login</h1>
 
@@ -55,6 +55,6 @@
 
         <a href="../Register" class="button-secondary">Cadastrar</a>
       </form>
-    </div>
+    </main>
   </body>
 </html>

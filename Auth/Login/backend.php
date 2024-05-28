@@ -15,8 +15,10 @@ if ($conn) {
     $retorno_do_banco = $stmt->fetch(); 
     if ($retorno_do_banco) {
       session_start();
-      $_SESSION["username"] = $retorno_do_banco['aluno_ra'];
-      $_SESSION["nome"] = $retorno_do_banco['aluno_nome'];
+
+      $_SESSION["username"] = $retorno_do_banco['aluno_nome'];
+      $_SESSION["ra"] = $retorno_do_banco['aluno_ra'];
+ 
       header("Location: ../../Home");
     } else {
       echo "Aluno não encontrado. Tente novamente";
