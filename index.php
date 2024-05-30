@@ -2,8 +2,8 @@
   session_start();
 
   if(isset($_SESSION["username"])) {
-    header("Location:./Home");
+    header("Location:./pages/Home");
   } else {
-    header("Location:./Auth/Login");
+    header("Location:./pages/Auth/Login");
   }
 ?>
