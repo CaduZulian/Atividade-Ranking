@@ -1,3 +1,11 @@
+create database fai_ranking;
+
+use fai_ranking;
+
+CREATE USER 'admin_ranking_fai'@'localhost' IDENTIFIED BY '1a2b3c4d@2024';
+
+GRANT ALL PRIVILEGES ON fai_ranking.* TO 'admin_ranking_fai'@'localhost';
+
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
@@ -28,6 +36,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `alunos` (
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `aluno_ra` int(11) NOT NULL,
   `aluno_nome` varchar(50) NOT NULL,
   `aluno_senha` varchar(10) DEFAULT NULL
@@ -47,7 +56,7 @@ INSERT INTO `alunos` (`aluno_ra`, `aluno_nome`, `aluno_senha`) VALUES
 --
 
 CREATE TABLE `entrega_atividade` (
-  `atividade_codigo` int(50) NOT NULL,
+  `atividade_codigo` int(50) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `atividade_nome` varchar(50) NOT NULL,
   `atividade_aluno` int(11) NOT NULL,
   `atividade_nota` varchar(4) NOT NULL,
@@ -75,15 +84,6 @@ INSERT INTO `entrega_atividade` (`atividade_codigo`, `atividade_nome`, `atividad
 --
 -- Índices de tabela `alunos`
 --
-ALTER TABLE `alunos`
-  ADD PRIMARY KEY (`aluno_ra`);
-
---
--- Índices de tabela `entrega_atividade`
---
-ALTER TABLE `entrega_atividade`
-  ADD PRIMARY KEY (`atividade_codigo`);
-
 --
 -- AUTO_INCREMENT para tabelas despejadas
 --
@@ -91,14 +91,9 @@ ALTER TABLE `entrega_atividade`
 --
 -- AUTO_INCREMENT de tabela `alunos`
 --
-ALTER TABLE `alunos`
-  MODIFY `aluno_ra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de tabela `entrega_atividade`
 --
-ALTER TABLE `entrega_atividade`
-  MODIFY `atividade_codigo` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

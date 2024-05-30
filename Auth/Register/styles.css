@@ -1,0 +1,51 @@
+body {
+  background: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+
+  background: var(--background);
+
+  padding: 1rem;
+
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+}
+
+.container h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.line hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+.line span {
+  font-size: 1rem;
+  color: var(--text-dark);
+}

@@ -1,6 +1,6 @@
 <?php
-$username = $_POST["ra"];
-$senha = $_POST["password"];
+$ra = $_POST["ra"];
+$password = $_POST["password"];
 
 include('../../Config/conexao_bd.php');
 $db = new Database();
@@ -8,17 +8,17 @@ $conn = $db->connect();
 
 if ($conn) {
   try {
-    $query = "SELECT * FROM `alunos` WHERE `aluno_ra` = " . $username . " AND `aluno_senha` = '" . $senha . "'";
+    $query = "SELECT * FROM `alunos` WHERE `aluno_ra` = " . $ra . " AND `aluno_senha` = '" . $password . "'";
     $stmt = $conn->prepare($query);
     $stmt->execute();
 
-    $retorno_do_banco = $stmt->fetch(); 
+    $retorno_do_banco = $stmt->fetch();
     if ($retorno_do_banco) {
       session_start();
 
       $_SESSION["username"] = $retorno_do_banco['aluno_nome'];
       $_SESSION["ra"] = $retorno_do_banco['aluno_ra'];
- 
+
       header("Location: ../../Home");
     } else {
       echo "Aluno não encontrado. Tente novamente";
